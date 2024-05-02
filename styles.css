@@ -1,3 +1,4 @@
+/* Existing Styles */
 body {
     font-family: 'Open Sans', sans-serif;
     color: #333;
@@ -44,7 +45,50 @@ html {
 }
 
 nav ul li a.active {
-    color: red; /* Change to fit your color scheme */
+    color: red; /* Ensure this matches your color scheme */
     font-weight: bold;
 }
 
+/* New Styles for Enhancements */
+main ul {
+    padding-left: 20px;
+}
+
+main ul li {
+    margin-bottom: 10px;
+    background-color: #f9f9f9; /* Light grey background for each list item */
+    border-left: 5px solid #005a87; /* Adds a thematic colored bar to the left */
+    padding: 10px;
+    box-shadow: 2px 2px 5px #ccc; /* Slight shadow for 3D effect */
+}
+
+main ul li strong {
+    color: #005a87; /* Theme color for headers in list */
+    font-size: 1.1em; /* Slightly larger font size for visibility */
+}
+
+/* Enhance link appearance */
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 5px;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background: rgba(255,255,255,0.3);
+    color: #fff;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    header nav ul li {
+        display: block; /* Stack nav items vertically on small screens */
+        margin-bottom: 10px;
+    }
+
+    main {
+        width: 90%; /* Allow more margin on small screens */
+    }
+}
