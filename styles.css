@@ -1,31 +1,8 @@
 /* Existing Styles */
-body {
-    font-family: 'Open Sans', sans-serif;
-    color: #333;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background: #f4f4f4;
-}
 
-header {
-    background: #005a87;
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
-}
-
-header nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-header nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
+/* New Styles for Enhancements */
 main {
+    display: flex;
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
@@ -33,62 +10,33 @@ main {
     box-shadow: 0 0 10px #ccc;
 }
 
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #333;
-    color: white;
+.image-container {
+    flex: 1;
+    margin-right: 20px;
 }
 
-html {
-    scroll-behavior: smooth;
+.image-container img {
+    width: 100%; /* Adjust the image size as needed */
+    height: auto; /* Maintain aspect ratio */
 }
 
-nav ul li a.active {
-    color: red; /* Ensure this matches your color scheme */
-    font-weight: bold;
+.text-container {
+    flex: 2;
 }
 
-/* New Styles for Enhancements */
-main ul {
-    padding-left: 20px;
-}
-
-main ul li {
-    margin-bottom: 10px;
-    background-color: #f9f9f9; /* Light grey background for each list item */
-    border-left: 5px solid #005a87; /* Adds a thematic colored bar to the left */
-    padding: 10px;
-    box-shadow: 2px 2px 5px #ccc; /* Slight shadow for 3D effect */
-}
-
-main ul li strong {
-    color: #005a87; /* Theme color for headers in list */
-    font-size: 1.1em; /* Slightly larger font size for visibility */
-}
-
-/* Enhance link appearance */
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 10px;
-    background: rgba(255,255,255,0.1);
-    border-radius: 5px;
-}
-
-nav ul li a:hover, nav ul li a.active {
-    background: rgba(255,255,255,0.3);
-    color: #fff;
+.text-container p,
+.text-container h2 {
+    margin-top: 0; /* Remove default margin */
 }
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 600px) {
-    header nav ul li {
-        display: block; /* Stack nav items vertically on small screens */
-        margin-bottom: 10px;
+    main {
+        flex-direction: column; /* Stack image and text vertically on small screens */
     }
 
-    main {
-        width: 90%; /* Allow more margin on small screens */
+    .image-container,
+    .text-container {
+        margin-right: 0;
     }
 }
