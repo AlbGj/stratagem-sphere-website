@@ -11,17 +11,17 @@ main {
 }
 
 .image-container {
-    flex: 1;
+    flex: 0 0 300px; /* Set a fixed width for the image container */
     margin-right: 20px;
 }
 
 .image-container img {
-    max-width: 100%; /* Set the maximum width of the image to 100% of its container */
+    max-width: 100%; /* Allow the image to adjust its width */
     height: auto; /* Maintain aspect ratio */
 }
 
 .text-container {
-    flex: 2;
+    flex: 1; /* Allow the text container to expand to fill remaining space */
 }
 
 .text-container p,
@@ -38,5 +38,6 @@ main {
     .image-container,
     .text-container {
         margin-right: 0;
+        flex: 1 1 auto; /* Allow both containers to grow and shrink equally */
     }
 }
