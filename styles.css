@@ -38,3 +38,13 @@ footer {
     background: #333;
     color: white;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav ul li a.active {
+    color: red; /* Change to fit your color scheme */
+    font-weight: bold;
+}
+
