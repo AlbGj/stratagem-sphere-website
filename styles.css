@@ -11,7 +11,7 @@ main {
 }
 
 .image-container {
-    flex: 0 0 300px; /* Set a fixed width for the image container */
+    flex: 0 0 auto; /* Allow the image container to shrink to fit its content */
     margin-right: 20px;
 }
 
