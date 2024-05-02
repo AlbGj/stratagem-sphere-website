@@ -1,8 +1,24 @@
 /* Existing Styles */
 
-/* New Styles for Enhancements */
+/* New Styles for About Us Page */
+header {
+    background: #005a87;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
 main {
-    display: flex;
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
@@ -10,34 +26,30 @@ main {
     box-shadow: 0 0 10px #ccc;
 }
 
-.image-container {
-    flex: 0 0 auto; /* Allow the image container to shrink to fit its content */
-    margin-right: 20px;
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: white;
 }
 
-.image-container img {
-    max-width: 100%; /* Allow the image to adjust its width */
-    height: auto; /* Maintain aspect ratio */
+html {
+    scroll-behavior: smooth;
 }
 
-.text-container {
-    flex: 1; /* Allow the text container to expand to fill remaining space */
-}
-
-.text-container p,
-.text-container h2 {
-    margin-top: 0; /* Remove default margin */
+nav ul li a.active {
+    color: red; /* Ensure this matches your color scheme */
+    font-weight: bold;
 }
 
 /* Responsive adjustments for smaller screens */
 @media (max-width: 600px) {
-    main {
-        flex-direction: column; /* Stack image and text vertically on small screens */
+    header nav ul li {
+        display: block; /* Stack nav items vertically on small screens */
+        margin-bottom: 10px;
     }
 
-    .image-container,
-    .text-container {
-        margin-right: 0;
-        flex: 1 1 auto; /* Allow both containers to grow and shrink equally */
+    main {
+        width: 90%; /* Allow more margin on small screens */
     }
 }
